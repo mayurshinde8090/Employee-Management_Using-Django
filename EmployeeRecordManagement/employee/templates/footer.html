@@ -1,0 +1,57 @@
+{% include 'header.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/footer.css' %}">
+<script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
+
+<body style="background-image : url({% static 'images/footer.jpg' %})"marginwidth="1000" marginheight="1000" >
+<footer>
+  <div class="row">
+    <div class="col">
+
+      <img src="{% static 'images/logo.png'%}" class="logo">
+
+        <p>Bring Your Ideas To Life.<br><br><br><br><br>
+         <br> <br><br><br>We help you to conquer the world.<br><br><br>
+          <br><br><h4>Our Core Values : </h4><br>
+          <br><br><br>We're passionate people.We eat,sleep and<br><br><br>
+          <br><br><br><br>live this stuff.
+
+        </p>
+    </div>
+    <div class="col">
+      <h3>Office<div class="underline"><span></span> </div></h3>
+      <p>SMTP Road</p>
+      <p>Blackfield, Mumbai</p>
+      <p>Maharashtra, PIN 400001, India</p>
+      <p class="email-id"><h4>tritech@gmail.com</h4></p>
+      <br><h4>+91 -  9154467389</h4>
+    </div>
+      <div class="col">
+        <h3>Links<div class="underline"><span></span> </div></h3>
+        <ul>
+            <li><br><a href="{% url 'index' %}">Home</a></li>
+            <li><br><a href="">Services</a></li>
+            <li><br><a href="">About us</a></li>
+            <li><br><a href="">Contact us</a></li>
+
+        </ul>
+      </div>
+        <div class="col">
+          <h3>Newsletter<div class="underline"><span></span> </div></h3>
+          <form>
+            <i class="far fa-envelope"></i>
+            <input type="email" placeholder="Enter your email id" required>
+            <button type="submit"><i class="fas fa-arrow-right"></i></button>
+          </form>
+          <div class="social-icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-whatsapp"></i>
+            <i class="fab fa-pinterest"></i>
+          </div>
+        </div>
+  </div>
+    <hr>
+      <p class="copyright">&copy; TRITECH</p>
+</footer>
+</body>

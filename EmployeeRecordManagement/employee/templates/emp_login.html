@@ -1,0 +1,57 @@
+{% include 'header.html' %}
+
+{% load static %}
+<link rel="stylesheet" href="{%static 'css/emplogin.css'%}" xmlns:width="http://www.w3.org/1999/xhtml">
+<body style="background-image : url({% static 'images/c13.jpg' %})"marginwidth="1000" marginheight="1000" >
+
+        <div class="card-body">
+            <img src="{% static 'images/empicon.png'%}" width="100" height="100" class="img-thumbnail rounded-circle">
+        <h5 class="p-2 text-danger" style="border-bottom:2px solid orange">Employee Login</h5>
+            <div class="container-fluid">
+            <form method="post" >
+                   {% csrf_token %}
+
+                <div class="form-row">
+
+                   <!--Username-->
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label><h6>Email ID :</h6></label>
+                            <input type="email" name="emailid" class="form-control" placeholder="Username"required>
+                        </div>
+                    </div>
+
+                </div>
+               <div class="form-row">
+                   <!-- Password-->
+                   <div class="col-sm-12">
+                       <div class="form-group">
+                           <label><h6>Password:</h6></label>
+                           <input type="password" name="pwd" class="form-control" placeholder="Password"required>
+                       </div>
+                   </div>
+
+               </div>
+
+
+                <center><input type="submit" value="LOGIN" class=" m-2 px-3 btn btn-primary"></center>
+                 <a href="{% url 'index' %}" class="float-right mt-2"> Go Back To Home</a>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+
+{% if error == "no" %}
+<script>
+    alert('Logged in Successfully');
+    window.location = {% url 'emp_home' %};
+</script>
+{% endif %}
+
+{% if error == "yes" %}
+<script>
+    alert('Invalid login credentials');
+</script>
+{% endif %}
